@@ -1,0 +1,27 @@
+{
+  "name": "web-log",
+  "version": "1.0.0",
+  "devDependencies": {
+    "babel-preset-es2015": "6.24.1",
+    "babelify": "7.2.0",
+    "browserify": "14.4.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "postinstall": "mix deps.get",
+    "6to5": "browserify main.js -o bundle.js -d",
+    "es2js": "mix compile",
+    "start": "npm run es2js && npm run 6to5"
+  }
+}

@@ -1,0 +1,8 @@
+_build
+deps
+node_modules
+priv
+package-lock.json
+mix.lock
+elixirscript.build.js
+bundle.js
